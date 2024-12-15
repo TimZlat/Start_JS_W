@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Событие load</title>
+    <link rel="stylesheet" href="./styles/style1.css">
+    <script>
+        window.addEventListener("load", function()
+        {
+            let w = screen.width;
+            let h = screen.height;
+            document.getElementById("si").innerHTML = w+" X "+h;
+        })
+        
+    </script>
+</head>
+<body>
+  <header>
+    <h1>Личный сайт Пытливого Дилетанта</h1>
+    <p>Используется для заданий Кружка "Start JS"</p>
+  </header>
+    <main>
+      <nav>
+        <ul>
+          <li><a href="index.html">Начало</a></li>
+          <li><a href="task1_js.html">Задание 1</a></li>
+          <li><a href="task2_js.html">Задание 2</a></li>
+          <li><a href="task3_js.html">Текущая страница</a></li>
+        </ul>
+      </nav>
+      <article>
+          <h3>Обработка события load</h3>
+          <p>
+              Работает скрипт обработки события загрузки страницы ("load")<br>
+              При загрузке страницы на экран выводятся размеры экрана устройства,<br> 
+              на котором эта страница отображается
+          </p>
+          <img src = "img/task31_js.png" alt="Скрипт Задания 3">
+          <p> Результат работы:</p>
+          <strong>Размер экрана: <span id="si"></span></strong>
+      </article>
+      <aside>
+          <h3> Вывод текущей даты и цифровые часы</h3>
+          <p id = "god"></p>
+          <p id = "min"></p>
+          <script> 
+            window.addEventListener("load", tim);
+            function tim()
+            {
+              let den = new Date();
+              let mes = new Date();
+              let mon = "";
+              let arr =["января","февраля","марта","апреля","мая",
+              "июня","июля","августа","сентября","октября","ноября","декабря"];
+              for(let i=0; i<12; i++)
+                {
+                  if(mes.getMonth() == i)
+                  {
+                    mon = arr[i];
+                    break;
+                  }
+                  
+                }
+              let god = new Date();
+              document.getElementById("god").innerHTML = 
+              den.getDate()+" "+mon+"  "+god.getFullYear()+" года";
+              let cha=new Date();
+              let min=new Date();
+              let sek=new Date();
+              let m=min.getMinutes();
+              let mi=""+m;
+              if(mi.length==1)
+                {
+                  m="0"+m;
+                }
+              let s=sek.getSeconds();
+              let se=""+s;
+              if(se.length==1)
+                {
+                  s="0"+s;
+                }
+              document.getElementById("min").innerHTML=cha.getHours()+":"+m+":"+s;
+              window.setTimeout(tim, 1000);
+            }
+          </script>
+      </aside>
+    </main>
+
+    <footer>
+        <p>Страничка используется для заданий по JavaScript<br>
+        Автор: Пытливый Дилетант Группа: 1ИП-1-11-24</p>
+      </footer>
+</body>
+</html>
