@@ -38,8 +38,7 @@
           <img src = "img/task31_js.png" alt="Скрипт Задания 3" width="580px">
           <p> Результат работы:</p>
           <strong>Размер экрана: <span id="si"></span></strong>
-      </article>
-      <aside>
+
           <h3> Вывод текущей даты и цифровые часы</h3>
           <p id = "god"></p>
           <p id = "min"></p>
@@ -83,6 +82,35 @@
               window.setTimeout(tim, 1000);
             }
           </script>
+      </article>
+      <aside>
+        <p>Функция вычисления среднего роста (урок 5 курса)</p>
+        <button id="myBtn" onclick="answerCalculate()">Нажми </button>
+        <p id="answer"></p>
+        <script>
+          document.getElementById("myBtn").onclick=answerCalculate(); 
+          function calculateAverageAge() {
+              let averageAge = 0;
+              let sum = 0;
+              let  groupAge = [12, 14, 13, 12];  
+              for (let i = 0; i < groupAge.length;  i++) 
+              {
+                      sum = sum + groupAge[i];
+              }
+              averageAge = sum / groupAge.length; 
+              
+              return averageAge;
+          }
+          
+          function answerCalculate(){
+          document.getElementById("answer").innerHTML = ('<p> Работала функция без параметров</p>'
+            +'<br>Средний возраст группы = ' + calculateAverageAge())
+          console.log('Средний возраст группы: ' + calculateAverageAge());
+          }
+
+       </script>
+
+          
       </aside>
     </main>
 
