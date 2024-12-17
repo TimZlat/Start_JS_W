@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Событие load</title>
+    <title>Обработка событий</title>
     <link rel="stylesheet" href="./styles/style1.css">
     <script>
         window.addEventListener("load", function()
@@ -84,11 +84,13 @@
           </script>
       </article>
       <aside>
+        <h3>Обработка события onclick</h3>
         <p>Функция вычисления среднего роста (урок 5 курса)</p>
         <button id="myBtn" onclick="answerCalculate()">Нажми </button>
         <p id="answer"></p>
         <script>
-          document.getElementById("myBtn").onclick=answerCalculate(); 
+          // window.addEventListener("click", answerCalculate());
+          document.getElementById("myBtn").onclick=answerCalculate; 
           function calculateAverageAge() {
               let averageAge = 0;
               let sum = 0;
