@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Обработка событий</title>
+    <link rel="stylesheet" href="./styles/style1.css">
+    <script>
+        window.addEventListener("load", function()
+        {
+            let w = screen.width;
+            let h = screen.height;
+            document.getElementById("si").innerHTML = w+" X "+h;
+        })
+        
+    </script>
+</head>
+<body>
+  <header>
+    <h1>Личный сайт Пытливого Дилетанта</h1>
+    <p>Используется для заданий Кружка "Start JS"</p>
+  </header>
+    <main>
+      <nav>
+        <ul>
+          <li><a href="index.html">Начало</a></li>
+          <li><a href="task1_js.html">Задание 1</a></li>
+          <li><a href="task2_js.html">Задание 2</a></li>
+          <li><a href="task3_js.html">Задание 3</a></li>
+          <li><a href="task4_js.html">Задание 4</a></li>
+        </ul>
+      </nav>
+      <article>
+          <h3>Пишем браузерного Динозаврика</h3>
+          <em>Пример анимации на CSS</em>
+          <p>
+            Сегодня сделаем на JavaScript очень простую браузерную игру <br>
+            с динозавриком, как в Google Chrome. <br>
+            Наша игра будет проще оригинальной: <br>
+            динозаврик будет неанимированный и сможет только прыгать, <br>
+            чтобы преодолеть препятствие.
+          </p>
+          
+      </article>
+      <aside>
+        <h3>Контейнер игрового поля для динозаврика</h3>
+          <!-- контейнер игрового поля -->
+            <div class="game">
+              <!-- контейнер динозаврика -->
+              <div id="dino"></div>
+              <!-- контейнер кактуса -->
+              <div id="cactus"></div>
+            </div>
+
+          <script src="/scripts/script4_1.js"></script>
+      </aside>
+    </main>
+
+    <footer>
+        <p>Страничка используется для заданий по JavaScript<br>
+        Автор: Пытливый Дилетант Группа: 1ИП-1-11-24</p>
+      </footer>
+</body>
+</html>
